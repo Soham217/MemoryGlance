@@ -20,7 +20,7 @@ html, body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-              url('/Images/bg-image.png') center/cover no-repeat;
+              url('../Images/bg-image.png') center/cover no-repeat;
   z-index: -2;
 }
 
