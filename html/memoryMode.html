@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Mode</title>
+    <link rel="stylesheet" href="../Styles/memoryMode.css" />
+</head>
+
+<body>
+
+    <!-- Blurred background image -->
+    <div id="blurred-bg">
+        <div class="dark-overlay"></div>
+    </div>
+
+
+    <!-- Foreground content -->
+    <div id="memory-mode">
+
+        <!-- Stage 1: Image with timer -->
+        <div id="image-stage">
+            <h2 id="img-head">Memorize the image</h2>
+            <img id="main-image" src="../Images/img1.jpg" alt="Memory Image" />
+            <p id="timer">Time left: 5s</p>
+        </div>
+
+        <!-- Stage 2: Recall input (initially hidden) -->
+        <div id="recall-stage">
+            <h2>What do you remember?</h2>
+            <textarea id="user-input" placeholder="Type what you remember, e.g., mug apple"></textarea>
+            <button id="submit-answer">Submit</button>
+            <p id="result" style="margin-top: 10px; font-weight: bold;"></p>
+            <div class="end-buttons">
+                <button onclick="window.location.href='../index.html'">Go to Home Page</button>
+                <button onclick="window.location.href='./memoryMode.html'">Restart Game</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+<script src="../js/memoryMode.js"></script>
+
+</html>

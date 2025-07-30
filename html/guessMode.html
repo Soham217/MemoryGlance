@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess Mode</title>
+    <link rel="stylesheet" href="../Styles/guessMode.css" />
+</head>
+
+<body>
+
+    <!-- Blurred background -->
+    <div id="blurred-bg"></div>
+    <div class="dark-overlay"></div>
+
+    <main id="guess-mode">
+        <!-- Stage 1: Image display -->
+        <section id="image-stage">
+            <h2 id="guess-heading">Memorize the image</h2>
+            <img id="guess-image" src="" alt="Guess Image" />
+            <p id="timer">5</p> <!-- Keep only this -->
+        </section>
+
+        <!-- Stage 2: Option selection -->
+        <section id="choice-stage">
+            <h2>What did you see?</h2>
+            <form id="options-form">
+                <!-- Checkboxes will be injected here -->
+            </form>
+            <button id="submit-guess">Submit</button>
+        </section>
+
+        <!-- Stage 3: Result -->
+        <section id="result-stage">
+            <h2>Your Score: <span id="score"></span></h2>
+            <div class="end-buttons">
+                <button onclick="location.href='./guessMode.html'">Restart Game</button>
+                <button onclick="location.href='../index.html'">Go to Home Page</button>
+            </div>
+        </section>
+
+    </main>
+</body>
+<script src="../js/guessMode.js"></script>
+
+</html>
