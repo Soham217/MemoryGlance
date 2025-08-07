@@ -4,8 +4,7 @@
   box-sizing: border-box;
 }
 
-body,
-html {
+body, html {
   height: 100%;
   font-family: 'Inter', sans-serif;
 }
@@ -59,18 +58,21 @@ main {
   margin-bottom: 25px;
 }
 
-.mode-btn {
-  background: #fff;
-  color: #1E1E2F;
+.mode-btn, .start-btn {
   border: none;
-  padding: 10px 20px;
   border-radius: 10px;
-  font-weight: 600;
   cursor: pointer;
+  font-weight: 600;
   transition: transform 0.2s;
 }
 
-.mode-btn:hover {
+.mode-btn {
+  background: #fff;
+  color: #1E1E2F;
+  padding: 10px 20px;
+}
+
+.mode-btn:hover, .start-btn:hover {
   transform: scale(1.05);
 }
 
@@ -78,16 +80,9 @@ main {
   background: #FFCB6B;
   color: black;
   padding: 1rem 2rem;
-  border: none;
   border-radius: 12px;
   font-size: 1.5rem;
   font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.start-btn:hover {
-  transform: scale(1.05);
 }
 
 footer {
@@ -123,17 +118,14 @@ footer a {
 
   .mode-toggle {
     flex-direction: column;
-    gap: 10px;
   }
 
-  .mode-btn {
+  .mode-btn, .start-btn {
     width: 100%;
-    padding: 10px;
+    padding: 1rem;
   }
 
   .start-btn {
-    width: 100%;
-    padding: 1rem;
     font-size: 1.2rem;
   }
 
