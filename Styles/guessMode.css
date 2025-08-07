@@ -1,11 +1,9 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Base Setup */
 html, body {
   height: 100%;
   font-family: 'Inter', sans-serif;
@@ -13,7 +11,6 @@ html, body {
   position: relative;
 }
 
-/* Blurred Background */
 #blurred-bg {
   position: fixed;
   top: 0; left: 0;
@@ -24,7 +21,6 @@ html, body {
   z-index: -2;
 }
 
-/* Guess Mode Layout */
 #guess-mode {
   display: flex;
   flex-direction: column;
@@ -34,7 +30,6 @@ html, body {
   padding: 20px;
 }
 
-/* Image Stage */
 #image-stage {
   text-align: center;
   transition: transform 0.6s ease, opacity 0.6s ease;
@@ -43,6 +38,7 @@ html, body {
   transform: translateX(-100%);
   opacity: 0;
 }
+
 #guess-image {
   width: 80vw;
   max-width: 600px;
@@ -53,7 +49,6 @@ html, body {
   animation: slideOutLeft 1s forwards;
 }
 
-/* Timer Text */
 #timer {
   margin-top: 15px;
   font-size: 1.5rem;
@@ -62,8 +57,7 @@ html, body {
   text-shadow: 1px 1px 2px black;
 }
 
-/* Choice Stage */
-#choice-stage {
+#choice-stage, #result-stage {
   display: none;
   flex-direction: column;
   align-items: center;
@@ -72,10 +66,11 @@ html, body {
   border-radius: 20px;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+#choice-stage {
   animation: fadeIn 0.5s ease forwards;
 }
 
-/* Options Grid */
 #options-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -96,10 +91,9 @@ html, body {
   border-radius: 8px;
   color: black;
   backdrop-filter: blur(5px);
-  gap: 10px; /* adds space between checkbox and text */
+  gap: 10px;
 }
 
-/* Submit Button */
 #submit-guess {
   margin-top: 15px;
   padding: 12px 24px;
@@ -114,18 +108,6 @@ html, body {
   transform: scale(1.05);
 }
 
-/* Result Stage */
-#result-stage {
-  display: none;
-  text-align: center;
-  background-color: rgba(255, 203, 107, 0.7);
-  padding: 20px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-}
-
-/* End Buttons */
 .end-buttons {
   margin-top: 20px;
   display: flex;
@@ -146,16 +128,6 @@ html, body {
   transform: scale(1.05);
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@keyframes slideOutLeft {
-  0% { opacity: 1; transform: translateX(0); }
-  100% { opacity: 0; transform: translateX(-100%); }
-}
-
 #guess-heading {
   font-size: 1.8rem;
   color: white;
@@ -163,8 +135,16 @@ html, body {
   text-shadow: 1px 1px 3px black;
   transition: transform 0.6s ease, opacity 0.6s ease;
 }
-
 #image-stage.hide #guess-heading {
   transform: translateX(-100%);
   opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideOutLeft {
+  0% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(-100%); }
 }
